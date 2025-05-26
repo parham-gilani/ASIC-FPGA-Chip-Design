@@ -1,0 +1,98 @@
+// 8-bit Adder/Subtractor datapath
+
+module Part3(SW, LEDR, LEDG, KEY, HEX7, HEX6, HEX5, HEX4, HEX1, HEX0);
+	input [8:0] SW;
+	input [1:0] KEY;
+	output [6:0] HEX7, HEX6, HEX5, HEX4, HEX1, HEX0;
+	output [7:0] LEDR;
+	output [8:0] LEDG;
+
+	/* Your code goes here */
+	reg[7:0] A;
+	reg[8:0] B;
+	wire[7:0] C;
+	assign LEDR = C;
+
+	hex_to_7seg h1(.hex(A[7:4]),.7seg(HEX7));
+	hex_to_7seg h2(.hex(A[3:0]),.7seg(HEX6));
+	hex_to_7seg h3(.hex(B[7:4]),.7seg(HEX5));
+	hex_to_7seg h4(.hex(B[3:0]),.7seg(HEX4));
+	hex_to_7seg h5(.hex(C[7:4]),.7seg(HEX1));
+	hex_to_7seg h6(.hex(C[3:0]),.7seg(HEX0));
+	assign LEDG[7:0] = A;
+	
+	RippleCarryAdder r1(.Cin(0),.A(A),.B(B[7:0]),.S(C),.Cout(LEDG[8]),.sub(B[8]));
+
+	always @(posedge KEY[1],negedge KEY[0])begin
+		if(KEY[0] == 0)begin
+			B <= 9'b000000000;
+			A <= 8'b00000000;
+		end
+		else begin
+			B <= SW;
+			A <= C;
+		end
+	end
+	
+endmodule
+
+module RippleCarryAdder(Cin,A,B,S,Cout,sub);
+
+	input Cin, sub;
+	input [7:0] A, B;
+	output [7:0] S;
+	output Cout;
+
+	wire[6:0] co;
+	wire[7:0] new_B;
+	assign new_B = (sub == 0)? B : ((~B)+1);
+
+	full_adder FA0(A[0],new_B[0],Cin,S[0],co[0]);
+	full_adder FA1(A[1],new_B[1],co[0],S[1],co[1]);
+	full_adder FA2(A[2],new_B[2],co[1],S[2],co[2]);
+	full_adder FA3(A[3],new_B[3],co[2],S[3],co[3]);
+	full_adder FA4(A[4],new_B[4],co[3],S[4],co[4]);
+	full_adder FA5(A[5],new_B[5],co[4],S[5],co[5]);
+	full_adder FA6(A[6],new_B[6],co[5],S[6],co[6]);
+	full_adder FA7(A[7],new_B[7],co[6],S[7],Cout);
+
+endmodule
+
+module full_adder(a, b, ci, s, co);
+
+	input a, b, ci;
+	output wire s, co;
+
+	assign s = a ^ b ^ ci;
+	assign co = (a & b) | (a & ci) | (b & ci);
+
+endmodule 
+
+module hex_to_7seg(hex, 7seg);
+
+	input [3:0] hex;
+	output reg [6:0] 7seg;
+
+	always @(hex) begin
+		case(hex)
+			4'b0000: 7seg = 7'b1000000;
+			4'b0001: 7seg = 7'b1111001;
+			4'b0010: 7seg = 7'b0100100;
+			4'b0011: 7seg = 7'b0110000;
+			4'b0100: 7seg = 7'b0011001;
+			4'b0101: 7seg = 7'b0010010;
+			4'b0110: 7seg = 7'b0100000;
+			4'b0111: 7seg = 7'b1111000;
+			4'b1000: 7seg = 7'b0000000;
+			4'b1001: 7seg = 7'b0011000;
+			4'b1010: 7seg = 7'b0001000;
+			4'b1011: 7seg = 7'b0000011;
+			4'b1100: 7seg = 7'b1000110;
+			4'b1101: 7seg = 7'b0100001;
+			4'b1110: 7seg = 7'b0000110;
+			4'b1111: 7seg = 7'b0001110;
+			default: 7seg = 7'b1111111; 
+		endcase
+	end
+
+endmodule

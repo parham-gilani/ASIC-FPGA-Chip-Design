@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="816" delta="new" >"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 16: System function call <arg fmt="%s" index="1">random</arg> not supported
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="816" delta="new" >"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 17: System function call <arg fmt="%s" index="1">random</arg> not supported
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="816" delta="new" >"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 24: System function call <arg fmt="%s" index="1">random</arg> not supported
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="816" delta="new" >"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 25: System function call <arg fmt="%s" index="1">random</arg> not supported
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="817" delta="new" >"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 31: System task <arg fmt="%s" index="1">stop</arg> ignored for synthesis
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 10: Signal &lt;<arg fmt="%s" index="1">reset</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1654" delta="new" >"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 34: Instantiating &lt;<arg fmt="%s" index="1">uut</arg>&gt; from unknown module &lt;<arg fmt="%s" index="2">ComplexMultiplier</arg>&gt;
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 3: Empty module &lt;<arg fmt="%s" index="1">ComplexMultiplier_tb</arg>&gt; remains a black box.
+</msg>
+
+</messages>
+

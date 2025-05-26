@@ -1,0 +1,64 @@
+# do {ComplexMultiplier_tb.fdo}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:04:16 on Jun 02,2024
+# vlog ComplexMultiplier.v 
+# -- Compiling module ComplexMultiplier
+# 
+# Top level modules:
+# 	ComplexMultiplier
+# End time: 22:04:16 on Jun 02,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:04:16 on Jun 02,2024
+# vlog ../lab1/ComplexMultiplier_tb.v 
+# -- Compiling module ComplexMultiplier_tb
+# 
+# Top level modules:
+# 	ComplexMultiplier_tb
+# End time: 22:04:16 on Jun 02,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:04:16 on Jun 02,2024
+# vlog C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 22:04:16 on Jun 02,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work work.ComplexMultiplier_tb glbl 
+# Start time: 22:04:17 on Jun 02,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): (vopt-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v(1): (vopt-2669) Unable to find library 'xilinxcorelib_ver'.
+# ** Error (suppressible): (vopt-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v(1): (vopt-2669) Unable to find library 'unisims_ver'.
+# ** Error (suppressible): (vopt-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v(1): (vopt-2669) Unable to find library 'unimacro_ver'.
+# ** Error (suppressible): (vopt-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vopt-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v(1): (vopt-2669) Unable to find library 'secureip'.
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=12, Warnings=4.
+# Error loading design
+# End time: 22:04:17 on Jun 02,2024, Elapsed time: 0:00:00
+# Errors: 12, Warnings: 4

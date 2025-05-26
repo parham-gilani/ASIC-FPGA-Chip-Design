@@ -1,0 +1,346 @@
+|Part3
+SW[0] => B[0].DATAIN
+SW[1] => B[1].DATAIN
+SW[2] => B[2].DATAIN
+SW[3] => B[3].DATAIN
+SW[4] => B[4].DATAIN
+SW[5] => B[5].DATAIN
+SW[6] => B[6].DATAIN
+SW[7] => B[7].DATAIN
+SW[8] => B[8].DATAIN
+LEDR[0] <= C[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= C[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= C[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= C[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= C[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= C[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= C[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= C[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[4] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[5] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[6] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[7] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[8] <= RippleCarryAdder:r1.Cout
+KEY[0] => A[0].ACLR
+KEY[0] => A[1].ACLR
+KEY[0] => A[2].ACLR
+KEY[0] => A[3].ACLR
+KEY[0] => A[4].ACLR
+KEY[0] => A[5].ACLR
+KEY[0] => A[6].ACLR
+KEY[0] => A[7].ACLR
+KEY[0] => B[0].ACLR
+KEY[0] => B[1].ACLR
+KEY[0] => B[2].ACLR
+KEY[0] => B[3].ACLR
+KEY[0] => B[4].ACLR
+KEY[0] => B[5].ACLR
+KEY[0] => B[6].ACLR
+KEY[0] => B[7].ACLR
+KEY[0] => B[8].ACLR
+KEY[1] => A[0].CLK
+KEY[1] => A[1].CLK
+KEY[1] => A[2].CLK
+KEY[1] => A[3].CLK
+KEY[1] => A[4].CLK
+KEY[1] => A[5].CLK
+KEY[1] => A[6].CLK
+KEY[1] => A[7].CLK
+KEY[1] => B[0].CLK
+KEY[1] => B[1].CLK
+KEY[1] => B[2].CLK
+KEY[1] => B[3].CLK
+KEY[1] => B[4].CLK
+KEY[1] => B[5].CLK
+KEY[1] => B[6].CLK
+KEY[1] => B[7].CLK
+KEY[1] => B[8].CLK
+HEX7[0] <= hex_to_7seg:h1.seven_seg
+HEX7[1] <= hex_to_7seg:h1.seven_seg
+HEX7[2] <= hex_to_7seg:h1.seven_seg
+HEX7[3] <= hex_to_7seg:h1.seven_seg
+HEX7[4] <= hex_to_7seg:h1.seven_seg
+HEX7[5] <= hex_to_7seg:h1.seven_seg
+HEX7[6] <= hex_to_7seg:h1.seven_seg
+HEX6[0] <= hex_to_7seg:h2.seven_seg
+HEX6[1] <= hex_to_7seg:h2.seven_seg
+HEX6[2] <= hex_to_7seg:h2.seven_seg
+HEX6[3] <= hex_to_7seg:h2.seven_seg
+HEX6[4] <= hex_to_7seg:h2.seven_seg
+HEX6[5] <= hex_to_7seg:h2.seven_seg
+HEX6[6] <= hex_to_7seg:h2.seven_seg
+HEX5[0] <= hex_to_7seg:h3.seven_seg
+HEX5[1] <= hex_to_7seg:h3.seven_seg
+HEX5[2] <= hex_to_7seg:h3.seven_seg
+HEX5[3] <= hex_to_7seg:h3.seven_seg
+HEX5[4] <= hex_to_7seg:h3.seven_seg
+HEX5[5] <= hex_to_7seg:h3.seven_seg
+HEX5[6] <= hex_to_7seg:h3.seven_seg
+HEX4[0] <= hex_to_7seg:h4.seven_seg
+HEX4[1] <= hex_to_7seg:h4.seven_seg
+HEX4[2] <= hex_to_7seg:h4.seven_seg
+HEX4[3] <= hex_to_7seg:h4.seven_seg
+HEX4[4] <= hex_to_7seg:h4.seven_seg
+HEX4[5] <= hex_to_7seg:h4.seven_seg
+HEX4[6] <= hex_to_7seg:h4.seven_seg
+HEX1[0] <= hex_to_7seg:h5.seven_seg
+HEX1[1] <= hex_to_7seg:h5.seven_seg
+HEX1[2] <= hex_to_7seg:h5.seven_seg
+HEX1[3] <= hex_to_7seg:h5.seven_seg
+HEX1[4] <= hex_to_7seg:h5.seven_seg
+HEX1[5] <= hex_to_7seg:h5.seven_seg
+HEX1[6] <= hex_to_7seg:h5.seven_seg
+HEX0[0] <= hex_to_7seg:h6.seven_seg
+HEX0[1] <= hex_to_7seg:h6.seven_seg
+HEX0[2] <= hex_to_7seg:h6.seven_seg
+HEX0[3] <= hex_to_7seg:h6.seven_seg
+HEX0[4] <= hex_to_7seg:h6.seven_seg
+HEX0[5] <= hex_to_7seg:h6.seven_seg
+HEX0[6] <= hex_to_7seg:h6.seven_seg
+
+
+|Part3|hex_to_7seg:h1
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+seven_seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|hex_to_7seg:h2
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+seven_seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|hex_to_7seg:h3
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+seven_seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|hex_to_7seg:h4
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+seven_seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|hex_to_7seg:h5
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+seven_seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|hex_to_7seg:h6
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+seven_seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seven_seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|RippleCarryAdder:r1
+Cin => Cin.IN1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => new_B.DATAB
+B[0] => Add0.IN16
+B[1] => new_B.DATAB
+B[1] => Add0.IN15
+B[2] => new_B.DATAB
+B[2] => Add0.IN14
+B[3] => new_B.DATAB
+B[3] => Add0.IN13
+B[4] => new_B.DATAB
+B[4] => Add0.IN12
+B[5] => new_B.DATAB
+B[5] => Add0.IN11
+B[6] => new_B.DATAB
+B[6] => Add0.IN10
+B[7] => new_B.DATAB
+B[7] => Add0.IN9
+S[0] <= full_adder:FA0.port3
+S[1] <= full_adder:FA1.port3
+S[2] <= full_adder:FA2.port3
+S[3] <= full_adder:FA3.port3
+S[4] <= full_adder:FA4.port3
+S[5] <= full_adder:FA5.port3
+S[6] <= full_adder:FA6.port3
+S[7] <= full_adder:FA7.port3
+Cout <= full_adder:FA7.port4
+sub => new_B.OUTPUTSELECT
+sub => new_B.OUTPUTSELECT
+sub => new_B.OUTPUTSELECT
+sub => new_B.OUTPUTSELECT
+sub => new_B.OUTPUTSELECT
+sub => new_B.OUTPUTSELECT
+sub => new_B.OUTPUTSELECT
+sub => new_B.OUTPUTSELECT
+
+
+|Part3|RippleCarryAdder:r1|full_adder:FA0
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|RippleCarryAdder:r1|full_adder:FA1
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|RippleCarryAdder:r1|full_adder:FA2
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|RippleCarryAdder:r1|full_adder:FA3
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|RippleCarryAdder:r1|full_adder:FA4
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|RippleCarryAdder:r1|full_adder:FA5
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|RippleCarryAdder:r1|full_adder:FA6
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|RippleCarryAdder:r1|full_adder:FA7
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+

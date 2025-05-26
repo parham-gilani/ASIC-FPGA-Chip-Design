@@ -1,0 +1,138 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: ComplexMultiplier_tb.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ComplexMultiplier_tb.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ComplexMultiplier_tb"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : ComplexMultiplier_tb
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" into library work
+Parsing module <ComplexMultiplier_tb>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ComplexMultiplier_tb>.
+WARNING:HDLCompiler:816 - "C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 16: System function call random not supported
+WARNING:HDLCompiler:816 - "C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 17: System function call random not supported
+"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 20. $display input1 = 16'b................
+"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 21. $display input2 = 16'b................
+"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 22. $display out = 34'b..................................
+WARNING:HDLCompiler:816 - "C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 24: System function call random not supported
+WARNING:HDLCompiler:816 - "C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 25: System function call random not supported
+"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 28. $display input1 = 16'b................
+"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 29. $display input2 = 16'b................
+"C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 30. $display out = 34'b..................................
+WARNING:HDLCompiler:817 - "C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 31: System task stop ignored for synthesis
+WARNING:HDLCompiler:91 - "C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 10: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+ERROR:HDLCompiler:1654 - "C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 34: Instantiating <uut> from unknown module <ComplexMultiplier>
+Module ComplexMultiplier_tb remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "C:\Users\gilan\Projects\ISEProjects\lab1\ComplexMultiplier_tb.v" Line 3: Empty module <ComplexMultiplier_tb> remains a black box.
+--> 
+
+Total memory usage is 4464732 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

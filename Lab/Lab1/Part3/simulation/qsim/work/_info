@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\gilan\Quartus2 Projects\Assignment1_starterkit\Part3\simulation\qsim
+vPart3
+Z1 I6Fak=dG4H;Y726=Zj3;8f2
+Z2 VcOQEnd`ne2nT7]3>]Ih@N0
+Z3 dC:\Users\gilan\Quartus2 Projects\Assignment1_starterkit\Part3\simulation\qsim
+Z4 w1709209439
+Z5 8Part3.vo
+Z6 FPart3.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Part3.vo|
+Z9 o-work work -O0
+Z10 n@part3
+!i10b 1
+Z11 !s100 l[MBkIL_DoC]^OVVGK2Vc1
+!s85 0
+Z12 !s108 1709209439.531000
+Z13 !s107 Part3.vo|
+!s101 -O0
+vPart3_vlg_check_tst
+!i10b 1
+Z14 !s100 SkCKB3oP>AjZY>MF4CmUE2
+Z15 IP38oUAA=V6Fd?NYBba1B@2
+Z16 VDTalb33dS^Qk54aH@e?iT3
+R3
+Z17 w1709209438
+Z18 8Part3.vt
+Z19 FPart3.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z20 !s108 1709209439.596000
+Z21 !s107 Part3.vt|
+Z22 !s90 -work|work|Part3.vt|
+!s101 -O0
+R9
+Z23 n@part3_vlg_check_tst
+vPart3_vlg_sample_tst
+!i10b 1
+Z24 !s100 A4eP:cc58PaP4dR3YnHm[0
+Z25 IL1W47<bO:ScIO>`o]YK7E2
+Z26 V72PNZm65F_3O_c]EBdj6V2
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@part3_vlg_sample_tst
+vPart3_vlg_vec_tst
+!i10b 1
+!s100 3Ee=6jTAoG`?lO9A>InAk3
+I9aPKgMk;mKnc>5EE9[VF_2
+Z28 VYR;a6Z5_D]E6<lMJ2Ric51
+R3
+R17
+R18
+R19
+Z29 L0 1253
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z30 n@part3_vlg_vec_tst

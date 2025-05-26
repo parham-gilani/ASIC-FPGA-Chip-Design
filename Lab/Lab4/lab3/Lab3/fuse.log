@@ -1,0 +1,49 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/gilan/Projects/ISEProjects/Lab3/DUT_tb_isim_beh.exe -prj C:/Users/gilan/Projects/ISEProjects/Lab3/DUT_tb_beh.prj work.DUT_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/gilan/Projects/ISEProjects/Lab3/ipcore_dir/cordic.v" into library work
+Analyzing Verilog file "C:/Users/gilan/Projects/ISEProjects/Lab3/ipcore_dir/MultAdd1.v" into library work
+WARNING:HDLCompiler:687 - "C:/Users/gilan/Projects/ISEProjects/Lab3/ipcore_dir/MultAdd1.v" Line 231: Illegal redeclaration of module <glbl>.
+Analyzing Verilog file "C:/Users/gilan/Projects/ISEProjects/Lab3/ipcore_dir/MultAdd2.v" into library work
+WARNING:HDLCompiler:687 - "C:/Users/gilan/Projects/ISEProjects/Lab3/ipcore_dir/MultAdd2.v" Line 233: Illegal redeclaration of module <glbl>.
+Analyzing Verilog file "C:/Users/gilan/Projects/ISEProjects/Lab3/ipcore_dir/MultAdd3.v" into library work
+WARNING:HDLCompiler:687 - "C:/Users/gilan/Projects/ISEProjects/Lab3/ipcore_dir/MultAdd3.v" Line 232: Illegal redeclaration of module <glbl>.
+Analyzing Verilog file "C:/Users/gilan/Projects/ISEProjects/Lab3/ComplexAdder.v" into library work
+Analyzing Verilog file "C:/Users/gilan/Projects/ISEProjects/Lab3/../../../OneDrive/Desktop/ComplexMultiplier.v" into library work
+Analyzing Verilog file "C:/Users/gilan/Projects/ISEProjects/Lab3/DUT.v" into library work
+WARNING:HDLCompiler:568 - "C:/Users/gilan/Projects/ISEProjects/Lab3/DUT.v" Line 287: Constant value is truncated to fit in <4> bits.
+Analyzing Verilog file "C:/Users/gilan/Projects/ISEProjects/Lab3/DUT_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+WARNING:HDLCompiler:687 - "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" Line 5: Illegal redeclaration of module <glbl>.
+Starting static elaboration
+WARNING:HDLCompiler:189 - "C:/Users/gilan/Projects/ISEProjects/Lab3/DUT.v" Line 325: Size mismatch in connection of port <c>. Formal port size is 48-bit while actual signal size is 33-bit.
+WARNING:HDLCompiler:189 - "C:/Users/gilan/Projects/ISEProjects/Lab3/DUT.v" Line 337: Size mismatch in connection of port <c>. Formal port size is 48-bit while actual signal size is 34-bit.
+Completed static elaboration
+Compiling module VCC
+Compiling module GND
+Compiling module FDR
+Compiling module LUT3(INIT=8'b10101000)
+Compiling module LUT5(INIT=32'b101011001010110011...
+Compiling module INV
+Compiling module LUT2(INIT=4'b0110)
+Compiling module MUXCY
+Compiling module XORCY
+Compiling module FDE
+Compiling module cordic
+Compiling module ComplexMultiplier
+Compiling module DSP48A1(CARRYINREG=0,CARRYOUTREG...
+Compiling module MultAdd1
+Compiling module MultAdd2
+Compiling module MultAdd3
+Compiling module ComplexAdder
+Compiling module DUT
+Compiling module DUT_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 25 Verilog Units
+Built simulation executable C:/Users/gilan/Projects/ISEProjects/Lab3/DUT_tb_isim_beh.exe
+Fuse Memory Usage: 43552 KB
+Fuse CPU Usage: 202 ms

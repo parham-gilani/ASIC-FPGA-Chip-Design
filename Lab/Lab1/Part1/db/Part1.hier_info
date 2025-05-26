@@ -1,0 +1,82 @@
+|Part1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= SW[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= SW[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= SW[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= full_adder:FA0.port3
+LEDG[1] <= full_adder:FA1.port3
+LEDG[2] <= full_adder:FA2.port3
+LEDG[3] <= full_adder:FA3.port3
+LEDG[4] <= full_adder:FA3.port4
+
+
+|Part1|full_adder:FA0
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part1|full_adder:FA1
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part1|full_adder:FA2
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part1|full_adder:FA3
+a => s.IN0
+a => co.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+

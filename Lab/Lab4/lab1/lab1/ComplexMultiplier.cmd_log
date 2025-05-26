@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/gilan/Projects/ISEProjects/lab1/ComplexMultiplier.xst" -ofn "C:/Users/gilan/Projects/ISEProjects/lab1/ComplexMultiplier.syr" 

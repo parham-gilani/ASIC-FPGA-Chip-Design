@@ -1,0 +1,861 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: DUT.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DUT.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DUT"
+Output Format                      : NGC
+Target Device                      : xc6slx45t-3-csg324
+
+---- Source Options
+Top Module Name                    : DUT
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\gilan\Projects\ISEProjects\Lab3\ipcore_dir\MultAdd3.v" into library work
+Parsing module <MultAdd3>.
+Analyzing Verilog file "C:\Users\gilan\Projects\ISEProjects\Lab3\ipcore_dir\MultAdd2.v" into library work
+Parsing module <MultAdd2>.
+Analyzing Verilog file "C:\Users\gilan\Projects\ISEProjects\Lab3\ipcore_dir\MultAdd1.v" into library work
+Parsing module <MultAdd1>.
+Analyzing Verilog file "C:\Users\gilan\Projects\ISEProjects\Lab3\ipcore_dir\cordic.v" into library work
+Parsing module <cordic>.
+Analyzing Verilog file "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v" into library work
+Parsing module <ComplexMultiplier>.
+Analyzing Verilog file "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexAdder.v" into library work
+Parsing module <ComplexAdder>.
+Analyzing Verilog file "C:\Users\gilan\Projects\ISEProjects\Lab3\DUT.v" into library work
+Parsing module <DUT>.
+WARNING:HDLCompiler:568 - "C:\Users\gilan\Projects\ISEProjects\Lab3\DUT.v" Line 287: Constant value is truncated to fit in <4> bits.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <DUT>.
+WARNING:HDLCompiler:413 - "C:\Users\gilan\Projects\ISEProjects\Lab3\DUT.v" Line 112: Result of 48-bit expression is truncated to fit in 38-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\gilan\Projects\ISEProjects\Lab3\DUT.v" Line 54: Assignment to count ignored, since the identifier is never used
+
+Elaborating module <cordic>.
+
+Elaborating module <ComplexMultiplier>.
+WARNING:HDLCompiler:413 - "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v" Line 16: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v" Line 17: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v" Line 18: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v" Line 19: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v" Line 21: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v" Line 22: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v" Line 23: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v" Line 24: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <MultAdd1>.
+
+Elaborating module <MultAdd2>.
+WARNING:HDLCompiler:189 - "C:\Users\gilan\Projects\ISEProjects\Lab3\DUT.v" Line 325: Size mismatch in connection of port <c>. Formal port size is 48-bit while actual signal size is 33-bit.
+
+Elaborating module <MultAdd3>.
+WARNING:HDLCompiler:189 - "C:\Users\gilan\Projects\ISEProjects\Lab3\DUT.v" Line 337: Size mismatch in connection of port <c>. Formal port size is 48-bit while actual signal size is 34-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\gilan\Projects\ISEProjects\Lab3\DUT.v" Line 340: Assignment to p3 ignored, since the identifier is never used
+
+Elaborating module <ComplexAdder>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <DUT>.
+    Related source file is "C:\Users\gilan\Projects\ISEProjects\Lab3\DUT.v".
+        s0 = 2'b00
+        s1 = 2'b01
+        s2 = 2'b10
+        s3 = 2'b11
+INFO:Xst:3210 - "C:\Users\gilan\Projects\ISEProjects\Lab3\DUT.v" line 331: Output port <p> of the instance <Madd3> is unconnected or connected to loadless signal.
+    Found 5-bit register for signal <counter>.
+    Found 2-bit register for signal <cntrl>.
+    Found 38-bit register for signal <Output>.
+    Found 16-bit register for signal <a1>.
+    Found 16-bit register for signal <b1>.
+    Found 16-bit register for signal <a2>.
+    Found 16-bit register for signal <b2>.
+    Found 16-bit register for signal <a3>.
+    Found 16-bit register for signal <b3>.
+    Found 16-bit register for signal <a4>.
+    Found 16-bit register for signal <b4>.
+    Found 16-bit register for signal <a5>.
+    Found 16-bit register for signal <b5>.
+    Found 16-bit register for signal <a6>.
+    Found 16-bit register for signal <b6>.
+    Found 16-bit register for signal <a7>.
+    Found 16-bit register for signal <b7>.
+    Found 16-bit register for signal <a8>.
+    Found 16-bit register for signal <b8>.
+    Found 16-bit register for signal <v1>.
+    Found 16-bit register for signal <w1>.
+    Found 16-bit register for signal <v2>.
+    Found 16-bit register for signal <v3>.
+    Found 16-bit register for signal <w2>.
+    Found 16-bit register for signal <w3>.
+    Found 16-bit register for signal <a9>.
+    Found 16-bit register for signal <b9>.
+    Found 16-bit register for signal <mult1>.
+    Found 16-bit register for signal <mult2>.
+    Found 32-bit register for signal <sq1>.
+    Found 32-bit register for signal <sq2>.
+    Found 33-bit register for signal <sq_in>.
+    Found 1-bit register for signal <get>.
+    Found 33-bit adder for signal <n0710> created at line 79.
+    Found 5-bit adder for signal <counter[4]_GND_1_o_add_308_OUT> created at line 293.
+    Found 16x16-bit multiplier for signal <input1[15]_input1[15]_MuLt_7_OUT> created at line 75.
+    Found 16x16-bit multiplier for signal <input2[15]_input2[15]_MuLt_8_OUT> created at line 76.
+    Found 38-bit 4-to-1 multiplexer for signal <cntrl[1]_addout[37]_wide_mux_275_OUT> created at line 72.
+    Found 1-bit 4-to-1 multiplexer for signal <cntrl[1]_get_Mux_301_o> created at line 72.
+    Found 5-bit comparator lessequal for signal <n0017> created at line 92
+    Found 5-bit comparator greater for signal <n0025> created at line 99
+    Found 5-bit comparator greater for signal <n0027> created at line 103
+    Found 5-bit comparator greater for signal <n0029> created at line 107
+    Found 5-bit comparator lessequal for signal <n0031> created at line 111
+    Found 5-bit comparator lessequal for signal <n0033> created at line 114
+    Found 5-bit comparator greater for signal <n0045> created at line 139
+    Found 5-bit comparator greater for signal <n0047> created at line 149
+    Found 5-bit comparator greater for signal <n0049> created at line 161
+    Found 5-bit comparator greater for signal <n0051> created at line 175
+    Found 5-bit comparator greater for signal <n0053> created at line 191
+    Found 5-bit comparator greater for signal <n0055> created at line 209
+    Found 5-bit comparator greater for signal <n0057> created at line 221
+    Found 5-bit comparator greater for signal <n0059> created at line 231
+    Found 5-bit comparator greater for signal <n0061> created at line 239
+    Found 5-bit comparator greater for signal <n0063> created at line 247
+    Found 5-bit comparator greater for signal <n0065> created at line 255
+    Found 5-bit comparator greater for signal <n0067> created at line 263
+    Found 5-bit comparator greater for signal <n0069> created at line 271
+    Found 5-bit comparator greater for signal <n0071> created at line 279
+    Found 5-bit comparator lessequal for signal <n0073> created at line 287
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 559 D-type flip-flop(s).
+	inferred  21 Comparator(s).
+	inferred  84 Multiplexer(s).
+Unit <DUT> synthesized.
+
+Synthesizing Unit <ComplexMultiplier>.
+    Related source file is "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexMultiplier.v".
+    Found 34-bit register for signal <multiplicationResult>.
+    Found 17-bit subtractor for signal <adderr> created at line 26.
+    Found 32-bit adder for signal <GND_4_o_GND_4_o_add_1_OUT> created at line 16.
+    Found 32-bit adder for signal <GND_4_o_GND_4_o_add_4_OUT> created at line 17.
+    Found 32-bit adder for signal <GND_4_o_GND_4_o_add_7_OUT> created at line 18.
+    Found 32-bit adder for signal <GND_4_o_GND_4_o_add_10_OUT> created at line 19.
+    Found 32-bit adder for signal <GND_4_o_GND_4_o_add_14_OUT> created at line 21.
+    Found 32-bit adder for signal <GND_4_o_GND_4_o_add_19_OUT> created at line 22.
+    Found 32-bit adder for signal <GND_4_o_GND_4_o_add_24_OUT> created at line 23.
+    Found 32-bit adder for signal <GND_4_o_GND_4_o_add_29_OUT> created at line 24.
+    Found 17-bit adder for signal <adderi> created at line 27.
+    Found 8x8-bit multiplier for signal <real_1[7]_real_2[7]_MuLt_15_OUT> created at line 21.
+    Found 8x8-bit multiplier for signal <real_1[7]_imag2[7]_MuLt_20_OUT> created at line 22.
+    Found 8x8-bit multiplier for signal <imag1[7]_real_2[7]_MuLt_25_OUT> created at line 23.
+    Found 8x8-bit multiplier for signal <imag1[7]_imag2[7]_MuLt_30_OUT> created at line 24.
+    Summary:
+	inferred   4 Multiplier(s).
+	inferred  10 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <ComplexMultiplier> synthesized.
+
+Synthesizing Unit <ComplexAdder>.
+    Related source file is "C:\Users\gilan\Projects\ISEProjects\Lab3\ComplexAdder.v".
+    Found 38-bit register for signal <result>.
+    Found 18-bit adder for signal <n0022[17:0]> created at line 15.
+    Found 19-bit adder for signal <n0025[18:0]> created at line 15.
+    Found 18-bit adder for signal <n0028[17:0]> created at line 16.
+    Found 19-bit adder for signal <n0031[18:0]> created at line 16.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  38 D-type flip-flop(s).
+Unit <ComplexAdder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 18
+ 16x16-bit multiplier                                  : 2
+ 8x8-bit multiplier                                    : 16
+# Adders/Subtractors                                   : 46
+ 17-bit adder                                          : 4
+ 17-bit subtractor                                     : 4
+ 18-bit adder                                          : 2
+ 19-bit adder                                          : 2
+ 32-bit adder                                          : 32
+ 33-bit adder                                          : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 38
+ 1-bit register                                        : 1
+ 16-bit register                                       : 26
+ 2-bit register                                        : 1
+ 32-bit register                                       : 2
+ 33-bit register                                       : 1
+ 34-bit register                                       : 4
+ 38-bit register                                       : 2
+ 5-bit register                                        : 1
+# Comparators                                          : 21
+ 5-bit comparator greater                              : 17
+ 5-bit comparator lessequal                            : 4
+# Multiplexers                                         : 116
+ 1-bit 2-to-1 multiplexer                              : 29
+ 1-bit 4-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 42
+ 32-bit 2-to-1 multiplexer                             : 32
+ 38-bit 2-to-1 multiplexer                             : 11
+ 38-bit 4-to-1 multiplexer                             : 1
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/cordic.ngc>.
+Reading Secure Unit <blk00000025>.
+Reading core <ipcore_dir/MultAdd1.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/MultAdd2.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/MultAdd3.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <cordic> for timing and area information for instance <sqr_root>.
+Loading core <MultAdd1> for timing and area information for instance <Madd1>.
+Loading core <MultAdd2> for timing and area information for instance <Madd2>.
+Loading core <MultAdd3> for timing and area information for instance <Madd3>.
+
+Synthesizing (advanced) Unit <DUT>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+	Multiplier <Mmult_input1[15]_input1[15]_MuLt_7_OUT> in block <DUT> and adder/subtractor <Madd_n0710> in block <DUT> are combined into a MAC<Maddsub_input1[15]_input1[15]_MuLt_7_OUT>.
+	The following registers are also absorbed by the MAC: <sq1> in block <DUT>, <sq_in> in block <DUT>.
+	Found pipelined multiplier on signal <input2[15]_input2[15]_MuLt_8_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_input2[15]_input2[15]_MuLt_8_OUT by adding 1 register level(s).
+Unit <DUT> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 1
+ 16x16-to-33-bit MAC                                   : 1
+# Multipliers                                          : 17
+ 16x16-bit registered multiplier                       : 1
+ 8x8-bit multiplier                                    : 16
+# Adders/Subtractors                                   : 44
+ 17-bit adder                                          : 4
+ 17-bit subtractor                                     : 4
+ 18-bit adder                                          : 2
+ 19-bit adder                                          : 2
+ 32-bit adder                                          : 32
+# Counters                                             : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 631
+ Flip-Flops                                            : 631
+# Comparators                                          : 21
+ 5-bit comparator greater                              : 17
+ 5-bit comparator lessequal                            : 4
+# Multiplexers                                         : 116
+ 1-bit 2-to-1 multiplexer                              : 29
+ 1-bit 4-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 42
+ 32-bit 2-to-1 multiplexer                             : 32
+ 38-bit 2-to-1 multiplexer                             : 11
+ 38-bit 4-to-1 multiplexer                             : 1
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ComplexAdder> ...
+
+Optimizing unit <DUT> ...
+
+Optimizing unit <ComplexMultiplier> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DUT, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 636
+ Flip-Flops                                            : 636
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DUT.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2777
+#      GND                         : 22
+#      INV                         : 307
+#      LUT1                        : 16
+#      LUT2                        : 187
+#      LUT3                        : 157
+#      LUT4                        : 184
+#      LUT5                        : 261
+#      LUT6                        : 302
+#      MUXCY                       : 638
+#      VCC                         : 22
+#      XORCY                       : 681
+# FlipFlops/Latches                : 687
+#      FDE                         : 471
+#      FDR                         : 213
+#      FDRE                        : 2
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 73
+#      IBUF                        : 35
+#      OBUF                        : 38
+# DSPs                             : 21
+#      DSP48A1                     : 21
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             687  out of  54576     1%  
+ Number of Slice LUTs:                 1414  out of  27288     5%  
+    Number used as Logic:              1414  out of  27288     5%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1807
+   Number with an unused Flip Flop:    1120  out of   1807    61%  
+   Number with an unused LUT:           393  out of   1807    21%  
+   Number of fully used LUT-FF pairs:   294  out of   1807    16%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                          74
+ Number of bonded IOBs:                  74  out of    190    38%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                     21  out of     58    36%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 692   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 46.057ns (Maximum Frequency: 21.712MHz)
+   Minimum input arrival time before clock: 6.997ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 46.057ns (frequency: 21.712MHz)
+  Total number of paths / destination ports: 2666622433738793000000000 / 1038
+-------------------------------------------------------------------------
+Delay:               46.057ns (Levels of Logic = 249)
+  Source:            sqr_root/blk00000006 (FF)
+  Destination:       sec_inst (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: sqr_root/blk00000006 to sec_inst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.447   0.943  blk00000006 (sig00000180)
+     LUT3:I0->O           17   0.205   1.028  blk00000373 (sig00000127)
+     begin scope: 'sqr_root/blk00000286:B<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          23   0.180   1.154  sec_inst (sec_net)
+     end scope: 'sqr_root/blk00000286:S<5>'
+     LUT3:I2->O            2   0.205   0.617  blk0000035c (sig0000012a)
+     begin scope: 'sqr_root/blk0000022f:A<3>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          23   0.180   1.154  sec_inst (sec_net)
+     end scope: 'sqr_root/blk0000022f:S<6>'
+     LUT3:I2->O            2   0.205   0.617  blk0000035d (sig0000012e)
+     begin scope: 'sqr_root/blk000001d8:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          24   0.180   1.173  sec_inst (sec_net)
+     end scope: 'sqr_root/blk000001d8:S<7>'
+     LUT3:I2->O            2   0.205   0.617  blk00000360 (sig00000135)
+     begin scope: 'sqr_root/blk00000181:A<3>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          24   0.180   1.173  sec_inst (sec_net)
+     end scope: 'sqr_root/blk00000181:S<8>'
+     LUT3:I2->O            2   0.205   0.617  blk00000362 (sig0000013b)
+     begin scope: 'sqr_root/blk0000012a:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          25   0.180   1.193  sec_inst (sec_net)
+     end scope: 'sqr_root/blk0000012a:S<9>'
+     LUT3:I2->O            2   0.205   0.617  blk00000366 (sig00000144)
+     begin scope: 'sqr_root/blk000000d3:A<3>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          25   0.180   1.193  sec_inst (sec_net)
+     end scope: 'sqr_root/blk000000d3:S<10>'
+     LUT3:I2->O            2   0.205   0.617  blk00000369 (sig0000014c)
+     begin scope: 'sqr_root/blk0000007c:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          26   0.180   1.207  sec_inst (sec_net)
+     end scope: 'sqr_root/blk0000007c:S<11>'
+     LUT3:I2->O            2   0.205   0.617  blk00000371 (sig00000156)
+     begin scope: 'sqr_root/blk00000025:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          27   0.180   1.221  sec_inst (sec_net)
+     end scope: 'sqr_root/blk00000025:S<12>'
+     LUT3:I2->O            1   0.205   0.580  blk0000032c (sig00000123)
+     begin scope: 'sqr_root/blk0000004f:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          25   0.180   1.193  sec_inst (sec_net)
+     end scope: 'sqr_root/blk0000004f:S<13>'
+     LUT3:I2->O            2   0.205   0.617  blk00000327 (sig0000010c)
+     begin scope: 'sqr_root/blk000000a3:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          30   0.180   1.264  sec_inst (sec_net)
+     end scope: 'sqr_root/blk000000a3:S<14>'
+     LUT3:I2->O            1   0.205   0.580  blk00000331 (sig000000e9)
+     begin scope: 'sqr_root/blk000000f7:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          24   0.180   1.173  sec_inst (sec_net)
+     end scope: 'sqr_root/blk000000f7:S<15>'
+     LUT3:I2->O            2   0.205   0.617  blk00000339 (sig000000c5)
+     begin scope: 'sqr_root/blk0000014b:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          33   0.180   1.306  sec_inst (sec_net)
+     end scope: 'sqr_root/blk0000014b:S<16>'
+     LUT3:I2->O            1   0.205   0.580  blk0000033d (sig000000a0)
+     begin scope: 'sqr_root/blk0000019f:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          23   0.180   1.154  sec_inst (sec_net)
+     end scope: 'sqr_root/blk0000019f:S<17>'
+     LUT3:I2->O            2   0.205   0.617  blk00000348 (sig0000007a)
+     begin scope: 'sqr_root/blk000001f3:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          36   0.180   1.349  sec_inst (sec_net)
+     end scope: 'sqr_root/blk000001f3:S<18>'
+     LUT3:I2->O            1   0.205   0.580  blk0000034b (sig00000053)
+     begin scope: 'sqr_root/blk00000247:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out          20   0.180   1.093  sec_inst (sec_net)
+     end scope: 'sqr_root/blk00000247:S<19>'
+     LUT3:I2->O            1   0.205   0.580  blk00000359 (sig0000002b)
+     begin scope: 'sqr_root/blk0000029a:A<2>'
+     SEC:in->out           1   0.205   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.180   0.579  sec_inst (sec_net)
+     end scope: 'sqr_root/blk0000029a:S<20>'
+     begin scope: 'sqr_root/blk000002da:B<0>'
+     SEC:in->out           1   0.206   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.172   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.180   0.000  sec_inst (sec_net)
+     SEC:in                    0.102          sec_inst
+    ----------------------------------------
+    Total                     46.057ns (16.434ns logic, 29.623ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1046 / 1046
+-------------------------------------------------------------------------
+Offset:              6.997ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       v1_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to v1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           211   1.222   2.057  reset_IBUF (reset_IBUF)
+     LUT3:I2->O            7   0.205   1.138  _n0969_inv111 (_n0969_inv11)
+     LUT6:I0->O           96   0.203   1.850  _n1019_inv1 (_n1019_inv)
+     FDE:CE                    0.322          v1_0
+    ----------------------------------------
+    Total                      6.997ns (1.952ns logic, 5.045ns route)
+                                       (27.9% logic, 72.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            out_37 (FF)
+  Destination:       Output<37> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: out_37 to Output<37>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.616  out_37 (out_37)
+     OBUF:I->O                 2.571          Output_37_OBUF (Output<37>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   46.057|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.24 secs
+ 
+--> 
+
+Total memory usage is 4539040 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+
