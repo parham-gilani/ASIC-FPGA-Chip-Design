@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/gilan/Projects/ISEProjects/part1/alu_IPCore.xst" -ofn "C:/Users/gilan/Projects/ISEProjects/part1/alu_IPCore.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constr.ucf -p xc7vx330t-ffg1761-1 alu_IPCore.ngc alu_IPCore.ngd  
+map -intstyle ise -p xc7vx330t-ffg1761-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o alu_IPCore_map.ncd alu_IPCore.ngd alu_IPCore.pcf 
+par -w -intstyle ise -ol high -mt off alu_IPCore_map.ncd alu_IPCore.ncd alu_IPCore.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml alu_IPCore.twx alu_IPCore.ncd -o alu_IPCore.twr alu_IPCore.pcf -ucf constr.ucf 

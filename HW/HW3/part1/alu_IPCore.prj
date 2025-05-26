@@ -1,0 +1,3 @@
+verilog work "ipcore_dir/Multiplication.v"
+verilog work "ipcore_dir/Addition_Subtraction.v"
+verilog work "alu.v"

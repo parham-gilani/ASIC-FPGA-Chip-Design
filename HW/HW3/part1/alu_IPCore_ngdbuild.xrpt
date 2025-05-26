@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="nt64" product="ISE" version="14.7">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="NgdBuild" timeStamp="Fri Apr 05 09:05:52 2024">
+    <section stringID="User_Env">
+      <table stringID="User_EnvVar">
+        <column stringID="variable"/>
+        <column stringID="value"/>
+        <row stringID="row" value="0">
+          <item stringID="variable" value="Path"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microchip\xc32\v4.21\bin;C:\Program Files\MATLAB\R2021b\runtime\win64;C:\Program Files\MATLAB\R2021b\bin;C:\mingw64;C:\mingw64\bin;C:\Users\gilan\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\gilan\AppData\Local\Programs\Python\Python311\;C:\Users\gilan\AppData\Local\Microsoft\WindowsApps;C:\Users\gilan\AppData\Local\Programs\Microsoft VS Code\bin;C:\modeltech_10.1c\win32;C:\modeltech64_2020.4\win64;C:\Users\gilan\AppData\Local\Programs\Python\Python311\Scripts;C:\altera\13.0sp1\modelsim_ase\win32aloem;C:\texlive\2024\bin\windows"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="variable" value="PATHEXT"/>
+          <item stringID="value" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+        </row>
+        <row stringID="row" value="2">
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
+        </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
+        </row>
+        <row stringID="row" value="4">
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="5">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
+        </row>
+        <row stringID="row" value="6">
+          <item stringID="variable" value="XILINX_VC_CHECK_NOOP"/>
+          <item stringID="value" value="1"/>
+        </row>
+      </table>
+      <item stringID="User_EnvOs" value="OS Information">
+        <item stringID="User_EnvOsname" value="Microsoft , 64-bit"/>
+        <item stringID="User_EnvOsrelease" value="major release  (build 9200)"/>
+      </item>
+      <item stringID="User_EnvHost" value="DESKTOP-MSR3A4T"/>
+      <table stringID="User_EnvCpu">
+        <column stringID="arch"/>
+        <column stringID="speed"/>
+        <row stringID="row" value="0">
+          <item stringID="arch" value="12th Gen Intel(R) Core(TM) i7-1260P"/>
+          <item stringID="speed" value="2496 MHz"/>
+        </row>
+      </table>
+    </section>
+    <task stringID="NGDBUILD_OPTION_SUMMARY">
+      <section stringID="NGDBUILD_OPTION_SUMMARY">
+        <item DEFAULT="None" label="-intstyle" stringID="NGDBUILD_intstyle" value="ise"/>
+        <item DEFAULT="None" label="-dd" stringID="NGDBUILD_output_dir" value="_ngo"/>
+        <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc7vx330t-ffg1761-1"/>
+        <item DEFAULT="None" label="-sd" stringID="NGDBUILD_search_path" value="ipcore_dir"/>
+        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="constr.ucf"/>
+      </section>
+    </task>
+    <task stringID="NGDBUILD_REPORT">
+      <section stringID="NGDBUILD_DESIGN_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="0"/>
+      </section>
+      <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFGP" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DSP48E1" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="80"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="1004"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="66"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="5"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="22"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="60"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="267"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="103"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="153"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="204"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6_2" value="18"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="219"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="13"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF8" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="34"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="67"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="182"/>
+      </section>
+      <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DSP48E1" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="80"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="1004"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="66"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUFG" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="5"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="22"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="60"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="267"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="103"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="153"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="204"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6_2" value="18"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="219"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="13"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF8" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="34"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="67"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_TS_TIMESPEC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="182"/>
+      </section>
+      <section stringID="NGDBUILD_CORE_SUMMARY">
+        <item COUNT="1" stringID="NGDBUILD_CORE" value="floating_point_v6_1, Xilinx CORE Generator 14.7"/>
+        <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
+          <section stringID="NGDBUILD_CORE_INSTANCES">
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="Addition_Subtraction">
+              <item stringID="NGDBUILD_CORE_INFO" type="floating_point_v6_1" value="Addition_Subtraction"/>
+              <item C_A_FRACTION_WIDTH="24" C_A_TDATA_WIDTH="32" C_A_TUSER_WIDTH="1" C_A_WIDTH="32" C_B_FRACTION_WIDTH="24" C_B_TDATA_WIDTH="32" C_B_TUSER_WIDTH="1" C_B_WIDTH="32" C_COMPARE_OPERATION="8" C_HAS_ABSOLUTE="0" C_HAS_ACLKEN="0" C_HAS_ADD="1" C_HAS_ARESETN="0" C_HAS_A_TLAST="0" C_HAS_A_TUSER="0" C_HAS_B="1" C_HAS_B_TLAST="0" C_HAS_B_TUSER="0" C_HAS_COMPARE="0" C_HAS_DIVIDE="0" C_HAS_DIVIDE_BY_ZERO="0" C_HAS_EXPONENTIAL="0" C_HAS_FIX_TO_FLT="0" C_HAS_FLT_TO_FIX="0" C_HAS_FLT_TO_FLT="0" C_HAS_INVALID_OP="0" C_HAS_LOGARITHM="0" C_HAS_MULTIPLY="0" C_HAS_OPERATION="1" C_HAS_OPERATION_TLAST="0" C_HAS_OPERATION_TUSER="0" C_HAS_OVERFLOW="1" C_HAS_RECIP="0" C_HAS_RECIP_SQRT="0" C_HAS_RESULT_TLAST="0" C_HAS_RESULT_TUSER="1" C_HAS_SQRT="0" C_HAS_SUBTRACT="1" C_HAS_UNDERFLOW="1" C_LATENCY="9" C_MULT_USAGE="0" C_OPERATION_TDATA_WIDTH="8" C_OPERATION_TUSER_WIDTH="1" C_OPTIMIZATION="2" C_RATE="1" C_RESULT_FRACTION_WIDTH="24" C_RESULT_TDATA_WIDTH="32" C_RESULT_TUSER_WIDTH="2" C_RESULT_WIDTH="32" C_THROTTLE_SCHEME="1" C_TLAST_RESOLUTION="0" C_XDEVICEFAMILY="virtex7" stringID="NGDBUILD_CORE_PARAMETERS" value="Addition_Subtraction"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="Multiplication">
+              <item stringID="NGDBUILD_CORE_INFO" type="floating_point_v6_1" value="Multiplication"/>
+              <item C_A_FRACTION_WIDTH="24" C_A_TDATA_WIDTH="32" C_A_TUSER_WIDTH="1" C_A_WIDTH="32" C_B_FRACTION_WIDTH="24" C_B_TDATA_WIDTH="32" C_B_TUSER_WIDTH="1" C_B_WIDTH="32" C_COMPARE_OPERATION="8" C_HAS_ABSOLUTE="0" C_HAS_ACLKEN="0" C_HAS_ADD="0" C_HAS_ARESETN="0" C_HAS_A_TLAST="0" C_HAS_A_TUSER="0" C_HAS_B="1" C_HAS_B_TLAST="0" C_HAS_B_TUSER="0" C_HAS_COMPARE="0" C_HAS_DIVIDE="0" C_HAS_DIVIDE_BY_ZERO="0" C_HAS_EXPONENTIAL="0" C_HAS_FIX_TO_FLT="0" C_HAS_FLT_TO_FIX="0" C_HAS_FLT_TO_FLT="0" C_HAS_INVALID_OP="0" C_HAS_LOGARITHM="0" C_HAS_MULTIPLY="1" C_HAS_OPERATION="0" C_HAS_OPERATION_TLAST="0" C_HAS_OPERATION_TUSER="0" C_HAS_OVERFLOW="1" C_HAS_RECIP="0" C_HAS_RECIP_SQRT="0" C_HAS_RESULT_TLAST="0" C_HAS_RESULT_TUSER="1" C_HAS_SQRT="0" C_HAS_SUBTRACT="0" C_HAS_UNDERFLOW="1" C_LATENCY="9" C_MULT_USAGE="2" C_OPERATION_TDATA_WIDTH="8" C_OPERATION_TUSER_WIDTH="1" C_OPTIMIZATION="1" C_RATE="1" C_RESULT_FRACTION_WIDTH="24" C_RESULT_TDATA_WIDTH="32" C_RESULT_TUSER_WIDTH="2" C_RESULT_WIDTH="32" C_THROTTLE_SCHEME="1" C_TLAST_RESOLUTION="0" C_XDEVICEFAMILY="virtex7" stringID="NGDBUILD_CORE_PARAMETERS" value="Multiplication"/>
+            </scope>
+          </section>
+        </section>
+      </section>
+    </task>
+  </application>
+
+</document>

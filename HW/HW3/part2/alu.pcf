@@ -1,0 +1,316 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Apr 06 10:37:47 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+PIN mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT1_pins<147> = BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT1" PINNAME CLK;
+PIN mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT_pins<147> = BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT" PINNAME CLK;
+TIMEGRP aclk = BEL "add_core/result_31" BEL "add_core/result_30" BEL
+        "add_core/result_29" BEL "add_core/result_28" BEL "add_core/result_27"
+        BEL "add_core/result_26" BEL "add_core/result_25" BEL
+        "add_core/result_24" BEL "add_core/result_23" BEL "add_core/result_22"
+        BEL "add_core/result_21" BEL "add_core/result_20" BEL
+        "add_core/result_19" BEL "add_core/result_18" BEL "add_core/result_17"
+        BEL "add_core/result_16" BEL "add_core/result_15" BEL
+        "add_core/result_14" BEL "add_core/result_13" BEL "add_core/result_12"
+        BEL "add_core/result_11" BEL "add_core/result_10" BEL
+        "add_core/result_9" BEL "add_core/result_8" BEL "add_core/result_7"
+        BEL "add_core/result_6" BEL "add_core/result_5" BEL
+        "add_core/result_4" BEL "add_core/result_3" BEL "add_core/result_2"
+        BEL "add_core/result_1" BEL "add_core/result_0" BEL
+        "add_core/add_sum_30" BEL "add_core/add_sum_29" BEL
+        "add_core/add_sum_28" BEL "add_core/add_sum_27" BEL
+        "add_core/add_sum_26" BEL "add_core/add_sum_25" BEL
+        "add_core/add_sum_24" BEL "add_core/add_sum_23" BEL
+        "add_core/add_sum_22" BEL "add_core/add_sum_21" BEL
+        "add_core/add_sum_20" BEL "add_core/add_sum_19" BEL
+        "add_core/add_sum_18" BEL "add_core/add_sum_17" BEL
+        "add_core/add_sum_16" BEL "add_core/add_sum_15" BEL
+        "add_core/add_sum_14" BEL "add_core/add_sum_13" BEL
+        "add_core/add_sum_12" BEL "add_core/add_sum_11" BEL
+        "add_core/add_sum_10" BEL "add_core/add_sum_9" BEL
+        "add_core/add_sum_8" BEL "add_core/add_sum_7" BEL "add_core/add_sum_6"
+        BEL "add_core/add_sum_5" BEL "add_core/add_sum_4" BEL
+        "add_core/add_sum_3" BEL "add_core/add_sum_2" BEL "add_core/add_sum_1"
+        BEL "add_core/add_sum_0" BEL "add_core/significand_add_24" BEL
+        "add_core/significand_add_23" BEL "add_core/significand_add_22" BEL
+        "add_core/significand_add_21" BEL "add_core/significand_add_20" BEL
+        "add_core/significand_add_19" BEL "add_core/significand_add_18" BEL
+        "add_core/significand_add_17" BEL "add_core/significand_add_16" BEL
+        "add_core/significand_add_15" BEL "add_core/significand_add_14" BEL
+        "add_core/significand_add_13" BEL "add_core/significand_add_12" BEL
+        "add_core/significand_add_11" BEL "add_core/significand_add_10" BEL
+        "add_core/significand_add_9" BEL "add_core/significand_add_8" BEL
+        "add_core/significand_add_7" BEL "add_core/significand_add_6" BEL
+        "add_core/significand_add_5" BEL "add_core/significand_add_4" BEL
+        "add_core/significand_add_3" BEL "add_core/significand_add_2" BEL
+        "add_core/significand_add_1" BEL "add_core/significand_add_0" BEL
+        "add_core/perform" BEL "add_core/significand_b_add_sub_23" BEL
+        "add_core/significand_b_add_sub_22" BEL
+        "add_core/significand_b_add_sub_21" BEL
+        "add_core/significand_b_add_sub_20" BEL
+        "add_core/significand_b_add_sub_19" BEL
+        "add_core/significand_b_add_sub_18" BEL
+        "add_core/significand_b_add_sub_17" BEL
+        "add_core/significand_b_add_sub_16" BEL
+        "add_core/significand_b_add_sub_15" BEL
+        "add_core/significand_b_add_sub_14" BEL
+        "add_core/significand_b_add_sub_13" BEL
+        "add_core/significand_b_add_sub_12" BEL
+        "add_core/significand_b_add_sub_11" BEL
+        "add_core/significand_b_add_sub_10" BEL
+        "add_core/significand_b_add_sub_9" BEL
+        "add_core/significand_b_add_sub_8" BEL
+        "add_core/significand_b_add_sub_7" BEL
+        "add_core/significand_b_add_sub_6" BEL
+        "add_core/significand_b_add_sub_5" BEL
+        "add_core/significand_b_add_sub_4" BEL
+        "add_core/significand_b_add_sub_3" BEL
+        "add_core/significand_b_add_sub_2" BEL
+        "add_core/significand_b_add_sub_1" BEL
+        "add_core/significand_b_add_sub_0" BEL "add_core/significand_sub_24"
+        BEL "add_core/significand_sub_23" BEL "add_core/significand_sub_22"
+        BEL "add_core/significand_sub_21" BEL "add_core/significand_sub_20"
+        BEL "add_core/significand_sub_19" BEL "add_core/significand_sub_18"
+        BEL "add_core/significand_sub_17" BEL "add_core/significand_sub_16"
+        BEL "add_core/significand_sub_15" BEL "add_core/significand_sub_14"
+        BEL "add_core/significand_sub_13" BEL "add_core/significand_sub_12"
+        BEL "add_core/significand_sub_11" BEL "add_core/significand_sub_10"
+        BEL "add_core/significand_sub_9" BEL "add_core/significand_sub_8" BEL
+        "add_core/significand_sub_7" BEL "add_core/significand_sub_6" BEL
+        "add_core/significand_sub_5" BEL "add_core/significand_sub_4" BEL
+        "add_core/significand_sub_3" BEL "add_core/significand_sub_2" BEL
+        "add_core/significand_sub_1" BEL "add_core/significand_sub_0" BEL
+        "add_core/exponent_b_add_sub_7" BEL "add_core/exponent_b_add_sub_6"
+        BEL "add_core/exponent_b_add_sub_5" BEL
+        "add_core/exponent_b_add_sub_4" BEL "add_core/exponent_b_add_sub_3"
+        BEL "add_core/exponent_b_add_sub_2" BEL
+        "add_core/exponent_b_add_sub_1" BEL "add_core/exponent_b_add_sub_0"
+        BEL "add_core/output_sign" BEL "add_core/operation_sub_addBar" BEL
+        "add_core/exponent_diff_7" BEL "add_core/exponent_diff_6" BEL
+        "add_core/exponent_diff_5" BEL "add_core/exponent_diff_4" BEL
+        "add_core/exponent_diff_3" BEL "add_core/exponent_diff_2" BEL
+        "add_core/exponent_diff_1" BEL "add_core/exponent_diff_0" BEL
+        "add_core/significand_b_23" BEL "add_core/significand_b_22" BEL
+        "add_core/significand_b_21" BEL "add_core/significand_b_20" BEL
+        "add_core/significand_b_19" BEL "add_core/significand_b_18" BEL
+        "add_core/significand_b_17" BEL "add_core/significand_b_16" BEL
+        "add_core/significand_b_15" BEL "add_core/significand_b_14" BEL
+        "add_core/significand_b_13" BEL "add_core/significand_b_12" BEL
+        "add_core/significand_b_11" BEL "add_core/significand_b_10" BEL
+        "add_core/significand_b_9" BEL "add_core/significand_b_8" BEL
+        "add_core/significand_b_7" BEL "add_core/significand_b_6" BEL
+        "add_core/significand_b_5" BEL "add_core/significand_b_4" BEL
+        "add_core/significand_b_3" BEL "add_core/significand_b_2" BEL
+        "add_core/significand_b_1" BEL "add_core/significand_b_0" BEL
+        "add_core/significand_a_23" BEL "add_core/significand_a_22" BEL
+        "add_core/significand_a_21" BEL "add_core/significand_a_20" BEL
+        "add_core/significand_a_19" BEL "add_core/significand_a_18" BEL
+        "add_core/significand_a_17" BEL "add_core/significand_a_16" BEL
+        "add_core/significand_a_15" BEL "add_core/significand_a_14" BEL
+        "add_core/significand_a_13" BEL "add_core/significand_a_12" BEL
+        "add_core/significand_a_11" BEL "add_core/significand_a_10" BEL
+        "add_core/significand_a_9" BEL "add_core/significand_a_8" BEL
+        "add_core/significand_a_7" BEL "add_core/significand_a_6" BEL
+        "add_core/significand_a_5" BEL "add_core/significand_a_4" BEL
+        "add_core/significand_a_3" BEL "add_core/significand_a_2" BEL
+        "add_core/significand_a_1" BEL "add_core/significand_a_0" BEL
+        "add_core/Comp_enable" BEL "add_core/operand_a_31" BEL
+        "add_core/operand_a_30" BEL "add_core/operand_a_29" BEL
+        "add_core/operand_a_28" BEL "add_core/operand_a_27" BEL
+        "add_core/operand_a_26" BEL "add_core/operand_a_25" BEL
+        "add_core/operand_a_24" BEL "add_core/operand_a_23" BEL
+        "add_core/operand_a_22" BEL "add_core/operand_a_21" BEL
+        "add_core/operand_a_20" BEL "add_core/operand_a_19" BEL
+        "add_core/operand_a_18" BEL "add_core/operand_a_17" BEL
+        "add_core/operand_a_16" BEL "add_core/operand_a_15" BEL
+        "add_core/operand_a_14" BEL "add_core/operand_a_13" BEL
+        "add_core/operand_a_12" BEL "add_core/operand_a_11" BEL
+        "add_core/operand_a_10" BEL "add_core/operand_a_9" BEL
+        "add_core/operand_a_8" BEL "add_core/operand_a_7" BEL
+        "add_core/operand_a_6" BEL "add_core/operand_a_5" BEL
+        "add_core/operand_a_4" BEL "add_core/operand_a_3" BEL
+        "add_core/operand_a_2" BEL "add_core/operand_a_1" BEL
+        "add_core/operand_a_0" BEL "add_core/operand_b_31" BEL
+        "add_core/operand_b_30" BEL "add_core/operand_b_29" BEL
+        "add_core/operand_b_28" BEL "add_core/operand_b_27" BEL
+        "add_core/operand_b_26" BEL "add_core/operand_b_25" BEL
+        "add_core/operand_b_24" BEL "add_core/operand_b_23" BEL
+        "add_core/operand_b_22" BEL "add_core/operand_b_21" BEL
+        "add_core/operand_b_20" BEL "add_core/operand_b_19" BEL
+        "add_core/operand_b_18" BEL "add_core/operand_b_17" BEL
+        "add_core/operand_b_16" BEL "add_core/operand_b_15" BEL
+        "add_core/operand_b_14" BEL "add_core/operand_b_13" BEL
+        "add_core/operand_b_12" BEL "add_core/operand_b_11" BEL
+        "add_core/operand_b_10" BEL "add_core/operand_b_9" BEL
+        "add_core/operand_b_8" BEL "add_core/operand_b_7" BEL
+        "add_core/operand_b_6" BEL "add_core/operand_b_5" BEL
+        "add_core/operand_b_4" BEL "add_core/operand_b_3" BEL
+        "add_core/operand_b_2" BEL "add_core/operand_b_1" BEL
+        "add_core/operand_b_0" BEL "add_core/significand_sub_complement_23"
+        BEL "add_core/significand_sub_complement_22" BEL
+        "add_core/significand_sub_complement_21" BEL
+        "add_core/significand_sub_complement_20" BEL
+        "add_core/significand_sub_complement_19" BEL
+        "add_core/significand_sub_complement_18" BEL
+        "add_core/significand_sub_complement_17" BEL
+        "add_core/significand_sub_complement_16" BEL
+        "add_core/significand_sub_complement_15" BEL
+        "add_core/significand_sub_complement_14" BEL
+        "add_core/significand_sub_complement_13" BEL
+        "add_core/significand_sub_complement_12" BEL
+        "add_core/significand_sub_complement_11" BEL
+        "add_core/significand_sub_complement_10" BEL
+        "add_core/significand_sub_complement_9" BEL
+        "add_core/significand_sub_complement_8" BEL
+        "add_core/significand_sub_complement_7" BEL
+        "add_core/significand_sub_complement_6" BEL
+        "add_core/significand_sub_complement_5" BEL
+        "add_core/significand_sub_complement_4" BEL
+        "add_core/significand_sub_complement_3" BEL
+        "add_core/significand_sub_complement_2" BEL
+        "add_core/significand_sub_complement_1" BEL
+        "add_core/significand_sub_complement_0" BEL "add_core/error_0" BEL
+        "add_core/state_2" BEL "add_core/state_1" BEL "add_core/state_0" BEL
+        "add_core/Exception" BEL "add_core/ready" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_0" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_1" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_2" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_3" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_4" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_5" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_6" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_7" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_8" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_9" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_10" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_11" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_12" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_13" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_14" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_15" BEL
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT2_16" PIN
+        "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT1_pins<147>"
+        PIN "mult_core/Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT_pins<147>"
+        BEL "mult_core/result_31" BEL "mult_core/result_30" BEL
+        "mult_core/result_29" BEL "mult_core/result_28" BEL
+        "mult_core/result_27" BEL "mult_core/result_26" BEL
+        "mult_core/result_25" BEL "mult_core/result_24" BEL
+        "mult_core/result_23" BEL "mult_core/result_22" BEL
+        "mult_core/result_21" BEL "mult_core/result_20" BEL
+        "mult_core/result_19" BEL "mult_core/result_18" BEL
+        "mult_core/result_17" BEL "mult_core/result_16" BEL
+        "mult_core/result_15" BEL "mult_core/result_14" BEL
+        "mult_core/result_13" BEL "mult_core/result_12" BEL
+        "mult_core/result_11" BEL "mult_core/result_10" BEL
+        "mult_core/result_9" BEL "mult_core/result_8" BEL "mult_core/result_7"
+        BEL "mult_core/result_6" BEL "mult_core/result_5" BEL
+        "mult_core/result_4" BEL "mult_core/result_3" BEL "mult_core/result_2"
+        BEL "mult_core/result_1" BEL "mult_core/result_0" BEL
+        "mult_core/product_mantissa_22" BEL "mult_core/product_mantissa_21"
+        BEL "mult_core/product_mantissa_20" BEL
+        "mult_core/product_mantissa_19" BEL "mult_core/product_mantissa_18"
+        BEL "mult_core/product_mantissa_17" BEL
+        "mult_core/product_mantissa_16" BEL "mult_core/product_mantissa_15"
+        BEL "mult_core/product_mantissa_14" BEL
+        "mult_core/product_mantissa_13" BEL "mult_core/product_mantissa_12"
+        BEL "mult_core/product_mantissa_11" BEL
+        "mult_core/product_mantissa_10" BEL "mult_core/product_mantissa_9" BEL
+        "mult_core/product_mantissa_8" BEL "mult_core/product_mantissa_7" BEL
+        "mult_core/product_mantissa_6" BEL "mult_core/product_mantissa_5" BEL
+        "mult_core/product_mantissa_4" BEL "mult_core/product_mantissa_3" BEL
+        "mult_core/product_mantissa_2" BEL "mult_core/product_mantissa_1" BEL
+        "mult_core/product_mantissa_0" BEL "mult_core/exponent_8" BEL
+        "mult_core/exponent_7" BEL "mult_core/exponent_6" BEL
+        "mult_core/exponent_5" BEL "mult_core/exponent_4" BEL
+        "mult_core/exponent_3" BEL "mult_core/exponent_2" BEL
+        "mult_core/exponent_1" BEL "mult_core/exponent_0" BEL
+        "mult_core/product_normalised_46" BEL
+        "mult_core/product_normalised_45" BEL
+        "mult_core/product_normalised_44" BEL
+        "mult_core/product_normalised_43" BEL
+        "mult_core/product_normalised_42" BEL
+        "mult_core/product_normalised_41" BEL
+        "mult_core/product_normalised_40" BEL
+        "mult_core/product_normalised_39" BEL
+        "mult_core/product_normalised_38" BEL
+        "mult_core/product_normalised_37" BEL
+        "mult_core/product_normalised_36" BEL
+        "mult_core/product_normalised_35" BEL
+        "mult_core/product_normalised_34" BEL
+        "mult_core/product_normalised_33" BEL
+        "mult_core/product_normalised_32" BEL
+        "mult_core/product_normalised_31" BEL
+        "mult_core/product_normalised_30" BEL
+        "mult_core/product_normalised_29" BEL
+        "mult_core/product_normalised_28" BEL
+        "mult_core/product_normalised_27" BEL
+        "mult_core/product_normalised_26" BEL
+        "mult_core/product_normalised_25" BEL
+        "mult_core/product_normalised_24" BEL
+        "mult_core/product_normalised_23" BEL
+        "mult_core/product_normalised_22" BEL
+        "mult_core/product_normalised_21" BEL
+        "mult_core/product_normalised_20" BEL
+        "mult_core/product_normalised_19" BEL
+        "mult_core/product_normalised_18" BEL
+        "mult_core/product_normalised_17" BEL
+        "mult_core/product_normalised_16" BEL
+        "mult_core/product_normalised_15" BEL
+        "mult_core/product_normalised_14" BEL
+        "mult_core/product_normalised_13" BEL
+        "mult_core/product_normalised_12" BEL
+        "mult_core/product_normalised_11" BEL
+        "mult_core/product_normalised_10" BEL "mult_core/product_normalised_9"
+        BEL "mult_core/product_normalised_8" BEL
+        "mult_core/product_normalised_7" BEL "mult_core/product_normalised_6"
+        BEL "mult_core/product_normalised_5" BEL
+        "mult_core/product_normalised_4" BEL "mult_core/product_normalised_3"
+        BEL "mult_core/product_normalised_2" BEL
+        "mult_core/product_normalised_1" BEL "mult_core/product_normalised_0"
+        BEL "mult_core/sum_exponent_8" BEL "mult_core/sum_exponent_7" BEL
+        "mult_core/sum_exponent_6" BEL "mult_core/sum_exponent_5" BEL
+        "mult_core/sum_exponent_4" BEL "mult_core/sum_exponent_3" BEL
+        "mult_core/sum_exponent_2" BEL "mult_core/sum_exponent_1" BEL
+        "mult_core/sum_exponent_0" BEL "mult_core/sign" BEL
+        "mult_core/error_0" BEL "mult_core/Underflow" BEL "mult_core/Overflow"
+        BEL "mult_core/Exception" BEL "add_core/first_in" BEL "mult_core/zero"
+        BEL "add_core/significand_sub_22_1" BEL
+        "add_core/significand_sub_23_1" BEL "add_core/significand_sub_19_1"
+        BEL "add_core/significand_sub_24_1" BEL "aclk_BUFGP/BUFG" BEL
+        "add_core/value_a_0" BEL "add_core/value_a_1" BEL
+        "add_core/value_a_10" BEL "add_core/value_a_11" BEL
+        "add_core/value_a_12" BEL "add_core/value_a_13" BEL
+        "add_core/value_a_14" BEL "add_core/value_a_15" BEL
+        "add_core/value_a_16" BEL "add_core/value_a_17" BEL
+        "add_core/value_a_18" BEL "add_core/value_a_19" BEL
+        "add_core/value_a_2" BEL "add_core/value_a_20" BEL
+        "add_core/value_a_21" BEL "add_core/value_a_22" BEL
+        "add_core/value_a_23" BEL "add_core/value_a_24" BEL
+        "add_core/value_a_25" BEL "add_core/value_a_26" BEL
+        "add_core/value_a_27" BEL "add_core/value_a_28" BEL
+        "add_core/value_a_29" BEL "add_core/value_a_3" BEL
+        "add_core/value_a_30" BEL "add_core/value_a_31" BEL
+        "add_core/value_a_4" BEL "add_core/value_a_5" BEL "add_core/value_a_6"
+        BEL "add_core/value_a_7" BEL "add_core/value_a_8" BEL
+        "add_core/value_a_9" BEL "add_core/value_b_0" BEL "add_core/value_b_1"
+        BEL "add_core/value_b_10" BEL "add_core/value_b_11" BEL
+        "add_core/value_b_12" BEL "add_core/value_b_13" BEL
+        "add_core/value_b_14" BEL "add_core/value_b_15" BEL
+        "add_core/value_b_16" BEL "add_core/value_b_17" BEL
+        "add_core/value_b_18" BEL "add_core/value_b_19" BEL
+        "add_core/value_b_2" BEL "add_core/value_b_20" BEL
+        "add_core/value_b_21" BEL "add_core/value_b_22" BEL
+        "add_core/value_b_23" BEL "add_core/value_b_24" BEL
+        "add_core/value_b_25" BEL "add_core/value_b_26" BEL
+        "add_core/value_b_27" BEL "add_core/value_b_28" BEL
+        "add_core/value_b_29" BEL "add_core/value_b_3" BEL
+        "add_core/value_b_30" BEL "add_core/value_b_31" BEL
+        "add_core/value_b_4" BEL "add_core/value_b_5" BEL "add_core/value_b_6"
+        BEL "add_core/value_b_7" BEL "add_core/value_b_8" BEL
+        "add_core/value_b_9";
+TS_aclk = PERIOD TIMEGRP "aclk" 4.9 ns HIGH 50%;
+SCHEMATIC END;
+

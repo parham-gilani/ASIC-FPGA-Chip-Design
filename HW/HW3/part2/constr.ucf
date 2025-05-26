@@ -1,0 +1,2 @@
+NET "aclk" TNM_NET = "aclk";
+TIMESPEC "TS_aclk" = PERIOD "aclk" 4.9 ns HIGH 50%;

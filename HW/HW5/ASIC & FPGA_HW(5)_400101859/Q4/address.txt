@@ -1,0 +1,20 @@
+
+
+Address : 10110000
+
+Address : 00110000
+Address : 00010111
+Address : 01111110
+
+
+
+Address : 01100001
+
+
+
+
+Address : 00100110
+
+
+
+

@@ -1,0 +1,19 @@
+Creating log file C:\Users\gilan\Projects\ISEProjects\part1\alu_IPCore_xpa.log.
+Loading device for application Rf_Device from file '7vx330t.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
+   "alu_IPCore" is an NCD, version 3.2, device xc7vx330t, package ffg1761, speed
+-1
+
+INFO:Power:1693 - 
+   --------------------------------------------------------------
+                         The power estimate will be calculated using PRODUCTION
+   data.
+   --------------------------------------------------------------
+
+Design load 20% completeDesign load 25% completeDesign load 30% completeDesign load 60% completeDesign load 95% completeDesign load 100% completeRunning Vector-less Activity Propagation
+..............
+Finished Running Vector-less Activity Propagation
+Finished Running Vector-less Activity Propagation 0 secs 
+
+Design 'alu_IPCore.ncd' and constraints 'alu_IPCore.pcf' opened successfully
+

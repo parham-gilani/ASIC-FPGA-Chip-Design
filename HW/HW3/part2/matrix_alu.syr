@@ -1,0 +1,779 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Reading design: matrix_alu.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "matrix_alu.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "matrix_alu"
+Output Format                      : NGC
+Target Device                      : xc7vx330t-1-ffg1761
+
+---- Source Options
+Top Module Name                    : matrix_alu
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\gilan\Projects\ISEProjects\part2\alu.v" into library work
+Parsing module <matrix_alu>.
+Parsing module <Multiplication>.
+Parsing module <Addition_Subtraction>.
+Parsing module <priority_encoder>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <matrix_alu>.
+
+Elaborating module <Addition_Subtraction>.
+
+Elaborating module <priority_encoder>.
+WARNING:HDLCompiler:1127 - "C:\Users\gilan\Projects\ISEProjects\part2\alu.v" Line 140: Assignment to exp_a ignored, since the identifier is never used
+
+Elaborating module <Multiplication>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <matrix_alu>.
+    Related source file is "C:\Users\gilan\Projects\ISEProjects\part2\alu.v".
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <matrix_alu> synthesized.
+
+Synthesizing Unit <Addition_Subtraction>.
+    Related source file is "C:\Users\gilan\Projects\ISEProjects\part2\alu.v".
+        step1 = 3'b000
+        step2 = 3'b001
+        step3 = 3'b010
+        step4 = 3'b011
+        step5 = 3'b100
+        step6 = 3'b101
+        step7 = 3'b110
+    Found 4-bit register for signal <state>.
+    Found 1-bit register for signal <ready>.
+    Found 32-bit register for signal <value_a>.
+    Found 32-bit register for signal <value_b>.
+    Found 32-bit register for signal <operand_b>.
+    Found 32-bit register for signal <operand_a>.
+    Found 1-bit register for signal <Comp_enable>.
+    Found 1-bit register for signal <Exception>.
+    Found 1-bit register for signal <output_sign>.
+    Found 1-bit register for signal <operation_sub_addBar>.
+    Found 24-bit register for signal <significand_a>.
+    Found 24-bit register for signal <significand_b>.
+    Found 8-bit register for signal <exponent_b_add_sub>.
+    Found 8-bit register for signal <exponent_diff>.
+    Found 24-bit register for signal <significand_b_add_sub>.
+    Found 1-bit register for signal <perform>.
+    Found 25-bit register for signal <significand_add>.
+    Found 24-bit register for signal <significand_sub_complement>.
+    Found 31-bit register for signal <add_sum>.
+    Found 25-bit register for signal <significand_sub>.
+    Found 32-bit register for signal <result>.
+    Found 2-bit register for signal <error>.
+    Found 1-bit register for signal <first_in>.
+    Found 8-bit subtractor for signal <n0192> created at line 161.
+    Found 8-bit adder for signal <operand_b[30]_operand_a[30]_add_9_OUT> created at line 161.
+    Found 25-bit adder for signal <n0182> created at line 171.
+    Found 24-bit adder for signal <significand_b_add_sub[23]_GND_2_o_add_17_OUT> created at line 172.
+    Found 8-bit adder for signal <GND_2_o_operand_a[30]_add_20_OUT> created at line 177.
+    Found 25-bit adder for signal <n0183> created at line 178.
+    Found 24-bit shifter logical right for signal <significand_b[23]_exponent_diff[7]_shift_right_11_OUT> created at line 166
+    Found 31-bit comparator greater for signal <a_operand[30]_b_operand[30]_LessThan_3_o> created at line 150
+    Found 8-bit comparator equal for signal <operand_a[30]_exponent_b_add_sub[7]_equal_13_o> created at line 167
+    Found 32-bit comparator not equal for signal <n0066> created at line 185
+    Found 32-bit comparator not equal for signal <n0068> created at line 185
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred 366 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  39 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <Addition_Subtraction> synthesized.
+
+Synthesizing Unit <priority_encoder>.
+    Related source file is "C:\Users\gilan\Projects\ISEProjects\part2\alu.v".
+    Found 8-bit subtractor for signal <Exponent_sub> created at line 334.
+    Found 25-bit adder for signal <significand[24]_GND_3_o_add_1_OUT> created at line 328.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <priority_encoder> synthesized.
+
+Synthesizing Unit <Multiplication>.
+    Related source file is "C:\Users\gilan\Projects\ISEProjects\part2\alu.v".
+        step1 = 3'b000
+        step2 = 3'b001
+        step3 = 3'b010
+        step4 = 3'b011
+        step5 = 3'b100
+        step6 = 3'b101
+    Found 4-bit register for signal <state>.
+    Found 1-bit register for signal <ready>.
+    Found 32-bit register for signal <value_a>.
+    Found 32-bit register for signal <value_b>.
+    Found 1-bit register for signal <sign>.
+    Found 1-bit register for signal <Exception>.
+    Found 24-bit register for signal <operand_a>.
+    Found 24-bit register for signal <operand_b>.
+    Found 9-bit register for signal <sum_exponent>.
+    Found 48-bit register for signal <product>.
+    Found 48-bit register for signal <product_normalised>.
+    Found 9-bit register for signal <exponent>.
+    Found 1-bit register for signal <zero>.
+    Found 23-bit register for signal <product_mantissa>.
+    Found 1-bit register for signal <Overflow>.
+    Found 1-bit register for signal <Underflow>.
+    Found 32-bit register for signal <result>.
+    Found 2-bit register for signal <error>.
+    Found 1-bit register for signal <first_in>.
+    Found 9-bit subtractor for signal <n0226> created at line 87.
+    Found 9-bit adder for signal <n0221> created at line 78.
+    Found 9-bit adder for signal <sum_exponent[8]_GND_5_o_add_11_OUT> created at line 87.
+    Found 23-bit adder for signal <product_normalised[46]_GND_5_o_add_15_OUT> created at line 91.
+    Found 24x24-bit multiplier for signal <operand_a[23]_operand_b[23]_MuLt_7_OUT> created at line 82.
+    Found 32-bit comparator not equal for signal <n0123> created at line 104
+    Found 32-bit comparator not equal for signal <n0125> created at line 104
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred 294 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  96 Multiplexer(s).
+Unit <Multiplication> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 24x24-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 12
+ 23-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 3
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 1
+# Registers                                            : 42
+ 1-bit register                                        : 14
+ 2-bit register                                        : 2
+ 23-bit register                                       : 1
+ 24-bit register                                       : 6
+ 25-bit register                                       : 2
+ 31-bit register                                       : 1
+ 32-bit register                                       : 8
+ 4-bit register                                        : 2
+ 48-bit register                                       : 2
+ 8-bit register                                        : 2
+ 9-bit register                                        : 2
+# Comparators                                          : 6
+ 31-bit comparator greater                             : 1
+ 32-bit comparator not equal                           : 4
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 138
+ 1-bit 2-to-1 multiplexer                              : 129
+ 24-bit 2-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 4
+ 48-bit 2-to-1 multiplexer                             : 1
+ 65-bit 2-to-1 multiplexer                             : 1
+# Logic shifters                                       : 1
+ 24-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <error_0> in Unit <add_core> is equivalent to the following FF/Latch, which will be removed : <error_1> 
+INFO:Xst:2261 - The FF/Latch <value_a_1> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_1> 
+INFO:Xst:2261 - The FF/Latch <value_a_10> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_10> 
+INFO:Xst:2261 - The FF/Latch <value_a_2> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_2> 
+INFO:Xst:2261 - The FF/Latch <value_a_11> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_11> 
+INFO:Xst:2261 - The FF/Latch <value_a_3> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_3> 
+INFO:Xst:2261 - The FF/Latch <value_a_12> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_12> 
+INFO:Xst:2261 - The FF/Latch <value_a_4> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_4> 
+INFO:Xst:2261 - The FF/Latch <value_a_13> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_13> 
+INFO:Xst:2261 - The FF/Latch <value_a_5> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_5> 
+INFO:Xst:2261 - The FF/Latch <value_a_14> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_14> 
+INFO:Xst:2261 - The FF/Latch <value_a_6> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_6> 
+INFO:Xst:2261 - The FF/Latch <value_a_15> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_15> 
+INFO:Xst:2261 - The FF/Latch <value_a_20> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_20> 
+INFO:Xst:2261 - The FF/Latch <value_a_7> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_7> 
+INFO:Xst:2261 - The FF/Latch <value_a_16> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_16> 
+INFO:Xst:2261 - The FF/Latch <value_a_21> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_21> 
+INFO:Xst:2261 - The FF/Latch <value_a_8> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_8> 
+INFO:Xst:2261 - The FF/Latch <value_a_17> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_17> 
+INFO:Xst:2261 - The FF/Latch <value_a_22> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_22> 
+INFO:Xst:2261 - The FF/Latch <value_a_9> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_9> 
+INFO:Xst:2261 - The FF/Latch <value_a_18> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_18> 
+INFO:Xst:2261 - The FF/Latch <value_a_19> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_19> 
+INFO:Xst:2261 - The FF/Latch <value_b_10> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_10> 
+INFO:Xst:2261 - The FF/Latch <value_b_11> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_11> 
+INFO:Xst:2261 - The FF/Latch <value_b_12> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_12> 
+INFO:Xst:2261 - The FF/Latch <value_b_13> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_13> 
+INFO:Xst:2261 - The FF/Latch <value_b_0> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_0> 
+INFO:Xst:2261 - The FF/Latch <value_b_14> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_14> 
+INFO:Xst:2261 - The FF/Latch <value_b_1> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_1> 
+INFO:Xst:2261 - The FF/Latch <value_b_15> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_15> 
+INFO:Xst:2261 - The FF/Latch <value_b_20> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_20> 
+INFO:Xst:2261 - The FF/Latch <value_b_2> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_2> 
+INFO:Xst:2261 - The FF/Latch <value_b_16> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_16> 
+INFO:Xst:2261 - The FF/Latch <value_b_21> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_21> 
+INFO:Xst:2261 - The FF/Latch <value_b_3> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_3> 
+INFO:Xst:2261 - The FF/Latch <value_b_17> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_17> 
+INFO:Xst:2261 - The FF/Latch <value_b_22> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_22> 
+INFO:Xst:2261 - The FF/Latch <value_b_4> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_4> 
+INFO:Xst:2261 - The FF/Latch <value_b_18> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_18> 
+INFO:Xst:2261 - The FF/Latch <value_b_5> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_5> 
+INFO:Xst:2261 - The FF/Latch <error_0> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <error_1> 
+INFO:Xst:2261 - The FF/Latch <value_b_19> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_19> 
+INFO:Xst:2261 - The FF/Latch <value_b_6> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_6> 
+INFO:Xst:2261 - The FF/Latch <value_b_7> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_7> 
+INFO:Xst:2261 - The FF/Latch <value_b_8> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_8> 
+INFO:Xst:2261 - The FF/Latch <value_b_9> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_b_9> 
+INFO:Xst:2261 - The FF/Latch <value_a_0> in Unit <mult_core> is equivalent to the following FF/Latch, which will be removed : <operand_a_0> 
+WARNING:Xst:2677 - Node <product_normalised_47> of sequential type is unconnected in block <mult_core>.
+
+Synthesizing (advanced) Unit <Multiplication>.
+	Found pipelined multiplier on signal <operand_a[23]_operand_b[23]_MuLt_7_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_operand_a[23]_operand_b[23]_MuLt_7_OUT by adding 2 register level(s).
+Unit <Multiplication> synthesized (advanced).
+WARNING:Xst:2677 - Node <product_normalised_47> of sequential type is unconnected in block <Multiplication>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 24x24-bit registered multiplier                       : 1
+# Adders/Subtractors                                   : 12
+ 23-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 3
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 1
+# Registers                                            : 611
+ Flip-Flops                                            : 611
+# Comparators                                          : 6
+ 31-bit comparator greater                             : 1
+ 32-bit comparator not equal                           : 4
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 138
+ 1-bit 2-to-1 multiplexer                              : 129
+ 24-bit 2-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 4
+ 48-bit 2-to-1 multiplexer                             : 1
+ 65-bit 2-to-1 multiplexer                             : 1
+# Logic shifters                                       : 1
+ 24-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <error_0> in Unit <Addition_Subtraction> is equivalent to the following FF/Latch, which will be removed : <error_1> 
+INFO:Xst:2261 - The FF/Latch <value_a_1> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_1> 
+INFO:Xst:2261 - The FF/Latch <value_a_10> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_10> 
+INFO:Xst:2261 - The FF/Latch <value_a_2> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_2> 
+INFO:Xst:2261 - The FF/Latch <value_a_11> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_11> 
+INFO:Xst:2261 - The FF/Latch <value_a_3> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_3> 
+INFO:Xst:2261 - The FF/Latch <value_a_12> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_12> 
+INFO:Xst:2261 - The FF/Latch <value_a_4> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_4> 
+INFO:Xst:2261 - The FF/Latch <value_a_13> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_13> 
+INFO:Xst:2261 - The FF/Latch <value_a_5> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_5> 
+INFO:Xst:2261 - The FF/Latch <value_a_14> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_14> 
+INFO:Xst:2261 - The FF/Latch <value_a_6> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_6> 
+INFO:Xst:2261 - The FF/Latch <value_a_15> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_15> 
+INFO:Xst:2261 - The FF/Latch <value_a_20> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_20> 
+INFO:Xst:2261 - The FF/Latch <value_a_7> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_7> 
+INFO:Xst:2261 - The FF/Latch <value_a_16> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_16> 
+INFO:Xst:2261 - The FF/Latch <value_a_21> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_21> 
+INFO:Xst:2261 - The FF/Latch <value_a_8> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_8> 
+INFO:Xst:2261 - The FF/Latch <value_a_17> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_17> 
+INFO:Xst:2261 - The FF/Latch <value_a_22> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_22> 
+INFO:Xst:2261 - The FF/Latch <value_a_9> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_9> 
+INFO:Xst:2261 - The FF/Latch <value_a_18> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_18> 
+INFO:Xst:2261 - The FF/Latch <value_a_19> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_19> 
+INFO:Xst:2261 - The FF/Latch <value_b_10> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_10> 
+INFO:Xst:2261 - The FF/Latch <value_b_11> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_11> 
+INFO:Xst:2261 - The FF/Latch <value_b_12> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_12> 
+INFO:Xst:2261 - The FF/Latch <value_b_13> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_13> 
+INFO:Xst:2261 - The FF/Latch <value_b_0> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_0> 
+INFO:Xst:2261 - The FF/Latch <value_b_14> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_14> 
+INFO:Xst:2261 - The FF/Latch <value_b_1> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_1> 
+INFO:Xst:2261 - The FF/Latch <value_b_15> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_15> 
+INFO:Xst:2261 - The FF/Latch <value_b_20> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_20> 
+INFO:Xst:2261 - The FF/Latch <value_b_2> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_2> 
+INFO:Xst:2261 - The FF/Latch <value_b_16> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_16> 
+INFO:Xst:2261 - The FF/Latch <value_b_21> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_21> 
+INFO:Xst:2261 - The FF/Latch <value_b_3> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_3> 
+INFO:Xst:2261 - The FF/Latch <value_b_17> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_17> 
+INFO:Xst:2261 - The FF/Latch <value_b_22> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_22> 
+INFO:Xst:2261 - The FF/Latch <value_b_4> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_4> 
+INFO:Xst:2261 - The FF/Latch <value_b_18> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_18> 
+INFO:Xst:2261 - The FF/Latch <value_b_5> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_5> 
+INFO:Xst:2261 - The FF/Latch <error_0> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <error_1> 
+INFO:Xst:2261 - The FF/Latch <value_b_19> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_19> 
+INFO:Xst:2261 - The FF/Latch <value_b_6> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_6> 
+INFO:Xst:2261 - The FF/Latch <value_b_7> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_7> 
+INFO:Xst:2261 - The FF/Latch <value_b_8> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_8> 
+INFO:Xst:2261 - The FF/Latch <value_b_9> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_b_9> 
+INFO:Xst:2261 - The FF/Latch <value_a_0> in Unit <Multiplication> is equivalent to the following FF/Latch, which will be removed : <operand_a_0> 
+
+Optimizing unit <matrix_alu> ...
+
+Optimizing unit <Addition_Subtraction> ...
+WARNING:Xst:1710 - FF/Latch <state_3> (without init value) has a constant value of 0 in block <Addition_Subtraction>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <priority_encoder> ...
+
+Optimizing unit <Multiplication> ...
+WARNING:Xst:1710 - FF/Latch <state_3> (without init value) has a constant value of 0 in block <Multiplication>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <state_3> (without init value) has a constant value of 0 in block <Multiplication>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_0> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_0> 
+INFO:Xst:2261 - The FF/Latch <add_core/ready> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/ready> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_1> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_1> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_2> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_2> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_3> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_3> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_4> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_4> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_5> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_5> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_6> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_6> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_7> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_7> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_8> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_8> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_9> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_9> 
+INFO:Xst:2261 - The FF/Latch <add_core/state_0> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/state_0> 
+INFO:Xst:2261 - The FF/Latch <add_core/state_1> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/state_1> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_10> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_10> 
+INFO:Xst:2261 - The FF/Latch <add_core/state_2> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/state_2> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_11> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_11> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_12> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_12> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_13> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_13> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_14> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_14> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_20> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_20> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_15> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_15> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_21> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_21> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_16> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_16> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_22> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_22> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_17> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_17> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_23> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_23> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_18> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_18> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_24> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_24> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_19> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_19> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_30> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_30> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_25> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_25> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_31> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_31> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_26> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_26> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_27> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_27> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_28> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_28> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_b_29> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_b_29> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_10> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_10> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_11> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_11> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_12> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_12> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_13> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_13> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_14> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_14> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_20> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_20> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_15> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_15> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_21> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_21> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_16> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_16> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_22> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_22> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_17> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_17> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_23> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_23> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_18> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_18> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_24> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_24> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_19> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_19> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_30> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_30> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_25> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_25> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_31> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_31> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_26> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_26> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_27> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_27> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_28> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_28> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_29> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_29> 
+INFO:Xst:2261 - The FF/Latch <add_core/first_in> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/first_in> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_0> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_0> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_1> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_1> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_2> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_2> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_3> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_3> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_4> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_4> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_5> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_5> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_6> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_6> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_7> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_7> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_8> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_8> 
+INFO:Xst:2261 - The FF/Latch <add_core/value_a_9> in Unit <matrix_alu> is equivalent to the following FF/Latch, which will be removed : <mult_core/value_a_9> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block matrix_alu, actual ratio is 0.
+WARNING:Xst:1426 - The value init of the FF/Latch add_core/first_in hinder the constant cleaning in the block matrix_alu.
+   You should achieve better results by setting this init to 1.
+FlipFlop add_core/significand_sub_19 has been replicated 1 time(s)
+FlipFlop add_core/significand_sub_22 has been replicated 1 time(s)
+FlipFlop add_core/significand_sub_23 has been replicated 1 time(s)
+FlipFlop add_core/significand_sub_24 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 511
+ Flip-Flops                                            : 511
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : matrix_alu.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1098
+#      GND                         : 1
+#      INV                         : 48
+#      LUT1                        : 23
+#      LUT2                        : 90
+#      LUT3                        : 124
+#      LUT4                        : 138
+#      LUT5                        : 153
+#      LUT6                        : 184
+#      MUXCY                       : 181
+#      MUXF7                       : 5
+#      VCC                         : 1
+#      XORCY                       : 150
+# FlipFlops/Latches                : 511
+#      FD                          : 3
+#      FDE                         : 366
+#      FDRE                        : 142
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 100
+#      IBUF                        : 66
+#      OBUF                        : 34
+# DSPs                             : 2
+#      DSP48E1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7vx330tffg1761-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             511  out of  408000     0%  
+ Number of Slice LUTs:                  760  out of  204000     0%  
+    Number used as Logic:               760  out of  204000     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    880
+   Number with an unused Flip Flop:     369  out of    880    41%  
+   Number with an unused LUT:           120  out of    880    13%  
+   Number of fully used LUT-FF pairs:   391  out of    880    44%  
+   Number of unique control sets:        13
+
+IO Utilization: 
+ Number of IOs:                         101
+ Number of bonded IOBs:                 101  out of    700    14%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      2  out of   1120     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+aclk                               | BUFGP                  | 513   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 5.291ns (Maximum Frequency: 189.000MHz)
+   Minimum input arrival time before clock: 2.443ns
+   Maximum output required time after clock: 1.369ns
+   Maximum combinational path delay: 1.207ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'aclk'
+  Clock period: 5.291ns (frequency: 189.000MHz)
+  Total number of paths / destination ports: 15057 / 1099
+-------------------------------------------------------------------------
+Delay:               5.291ns (Levels of Logic = 14)
+  Source:            add_core/significand_sub_19_1 (FF)
+  Destination:       add_core/result_30 (FF)
+  Source Clock:      aclk rising
+  Destination Clock: aclk rising
+
+  Data Path: add_core/significand_sub_19_1 to add_core/result_30
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.282   0.485  add_core/significand_sub_19_1 (add_core/significand_sub_19_1)
+     LUT2:I0->O            1   0.053   0.413  add_core/pe/significand[24]_PWR_3_o_equal_26_o<24>11_SW0 (N22)
+     LUT6:I5->O           20   0.053   0.538  add_core/pe/significand[24]_PWR_3_o_equal_26_o<24>11 (add_core/pe/significand[24]_PWR_3_o_equal_14_o<24>1)
+     LUT6:I5->O           19   0.053   0.532  add_core/pe/significand[24]_PWR_3_o_equal_26_o<24>1 (add_core/pe/significand[24]_PWR_3_o_equal_26_o<24>1)
+     LUT6:I5->O           13   0.053   0.493  add_core/pe/significand[24]_PWR_3_o_equal_26_o<24>2 (add_core/pe/significand[24]_PWR_3_o_equal_26_o<24>2)
+     LUT6:I5->O            3   0.053   0.616  add_core/pe/significand[24]_PWR_3_o_equal_25_o<24>1 (add_core/pe/significand[24]_PWR_3_o_equal_25_o)
+     LUT6:I3->O            1   0.053   0.413  add_core/pe/shift<3>1 (add_core/pe/shift<3>1)
+     LUT6:I5->O            1   0.053   0.000  add_core/pe/Msub_Exponent_sub_lut<2> (add_core/pe/Msub_Exponent_sub_lut<2>)
+     MUXCY:S->O            1   0.291   0.000  add_core/pe/Msub_Exponent_sub_cy<2> (add_core/pe/Msub_Exponent_sub_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/pe/Msub_Exponent_sub_cy<3> (add_core/pe/Msub_Exponent_sub_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/pe/Msub_Exponent_sub_cy<4> (add_core/pe/Msub_Exponent_sub_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/pe/Msub_Exponent_sub_cy<5> (add_core/pe/Msub_Exponent_sub_cy<5>)
+     MUXCY:CI->O           0   0.015   0.000  add_core/pe/Msub_Exponent_sub_cy<6> (add_core/pe/Msub_Exponent_sub_cy<6>)
+     XORCY:CI->O           1   0.320   0.413  add_core/pe/Msub_Exponent_sub_xor<7> (add_core/exponent_sub<7>)
+     LUT3:I2->O            1   0.053   0.000  add_core/Mmux_add_sum[30]_exponent_sub[7]_MUX_363_o11 (add_core/add_sum[30]_exponent_sub[7]_MUX_363_o)
+     FDRE:D                    0.011          add_core/result_30
+    ----------------------------------------
+    Total                      5.291ns (1.388ns logic, 3.903ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'aclk'
+  Total number of paths / destination ports: 8214 / 192
+-------------------------------------------------------------------------
+Offset:              2.443ns (Levels of Logic = 15)
+  Source:            value_b<0> (PAD)
+  Destination:       add_core/state_2 (FF)
+  Destination Clock: aclk rising
+
+  Data Path: value_b<0> to add_core/state_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.000   0.765  value_b_0_IBUF (value_b_0_IBUF)
+     LUT6:I1->O            1   0.053   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_lut<0> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<0> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<1> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<2> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<3> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<4> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<5> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<6> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<7> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<8> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<9> (add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<9>)
+     MUXCY:CI->O           2   0.178   0.491  add_core/Mcompar_value_b[31]_b_operand[31]_not_equal_26_o_cy<10> (add_core/value_b[31]_b_operand[31]_not_equal_26_o)
+     LUT5:I3->O            1   0.053   0.413  add_core/Mmux_state[3]_GND_2_o_select_42_OUT31 (add_core/Mmux_state[3]_GND_2_o_select_42_OUT3)
+     LUT6:I5->O            1   0.053   0.000  add_core/Mmux_state[3]_GND_2_o_select_42_OUT32 (add_core/state[3]_GND_2_o_select_42_OUT<2>)
+     FDE:D                     0.011          add_core/state_2
+    ----------------------------------------
+    Total                      2.443ns (0.774ns logic, 1.669ns route)
+                                       (31.7% logic, 68.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'aclk'
+  Total number of paths / destination ports: 67 / 34
+-------------------------------------------------------------------------
+Offset:              1.369ns (Levels of Logic = 2)
+  Source:            add_core/result_31 (FF)
+  Destination:       result<31> (PAD)
+  Source Clock:      aclk rising
+
+  Data Path: add_core/result_31 to result<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.282   0.635  add_core/result_31 (add_core/result_31)
+     LUT4:I0->O            1   0.053   0.399  Mmux_result251 (result_31_OBUF)
+     OBUF:I->O                 0.000          result_31_OBUF (result<31>)
+    ----------------------------------------
+    Total                      1.369ns (0.335ns logic, 1.034ns route)
+                                       (24.5% logic, 75.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 66 / 33
+-------------------------------------------------------------------------
+Delay:               1.207ns (Levels of Logic = 3)
+  Source:            func<0> (PAD)
+  Destination:       result<31> (PAD)
+
+  Data Path: func<0> to result<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.000   0.755  func_0_IBUF (func_0_IBUF)
+     LUT4:I1->O            1   0.053   0.399  Mmux_result321 (result_9_OBUF)
+     OBUF:I->O                 0.000          result_9_OBUF (result<9>)
+    ----------------------------------------
+    Total                      1.207ns (0.053ns logic, 1.154ns route)
+                                       (4.4% logic, 95.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock aclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+aclk           |    5.291|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.66 secs
+ 
+--> 
+
+Total memory usage is 4634680 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :  166 (   0 filtered)
+
